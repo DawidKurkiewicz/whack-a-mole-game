@@ -30,7 +30,7 @@ function peep() {
 };
 
 function startGame() {
-    scoreBoard.textContant = 0;
+    scoreBoard.textContent = 0;
     timeUp = false;
     score = 0;
     peep();
@@ -44,3 +44,4 @@ function bonk(e) {
     scoreBoard.textContent = score;
 }
 moles.forEach(mole => mole.addEventListener("click", bonk))
+moles.forEach(mole => mole.addEventListener("touchstart", bonk))
